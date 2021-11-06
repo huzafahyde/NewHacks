@@ -18,19 +18,29 @@ campus_question.pack()
 
 frame = tk.Frame(master=window)
 
+lb = tk.Listbox(window)
 
 def on_campus():
-    lb = tk.Listbox(window)
     lb.insert(1, "McMaster University")
     lb.insert(2, "Western University")
     lb.pack()
     yes['state'] = 'disabled'
 
-yes = tk.Button(master=frame,text="Yes", command = on_campus)
-yes.grid(column = 1,row=1)
-no = tk.Button(master=frame,text="No")
-no.grid(column = 2,row=1)
+    confirm = tk.Button(text="select", command=choose_uni)
+    confirm.pack()
+
+
+def choose_uni():
+    for i in lb.curselection():
+        print(lb.get(i))
+
+
+yes = tk.Button(master=frame, text="Yes", command=on_campus)
+yes.grid(column=1, row=1)
+no = tk.Button(master=frame, text="No")
+no.grid(column=2, row=1)
+
+
 
 frame.pack()
 window.mainloop()
-
