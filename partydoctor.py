@@ -1,7 +1,7 @@
 import tkinter as tk
 
 leave = False
-show_school = False
+counter = 0
 
 window = tk.Tk()
 window.geometry('600x500')
@@ -24,6 +24,7 @@ def on_campus():
     lb.insert(1, "McMaster University")
     lb.insert(2, "Western University")
     lb.pack()
+    yes['state'] = 'disabled'
 
 yes = tk.Button(master=frame,text="Yes", command = on_campus)
 yes.grid(column = 1,row=1)
