@@ -7,6 +7,7 @@ window['background'] = '#E47B7B'
 
 main_frame = tk.Frame(master=window)
 yesno_frame = tk.Frame(master=main_frame)
+number_frame = tk.Frame(master=main_frame)
 
 welcome = tk.Label(
     text="Welcome to Party Doctor",
@@ -74,7 +75,7 @@ def show_guesses():
 
 responses = []
 
-def show_response(ID):
+#def show_response(ID):
 
 
 
